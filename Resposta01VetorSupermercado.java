@@ -21,22 +21,22 @@ class Resposta01VetorSupermercado {
         int maiorValor = caixa[0];
         int maiorCaixa = 0;
         for (int i = 1; i  < caixa.length - 1; i++) {
-            maiorValor = (caixa[i] > maiorValor) ? caixa[i] : maiorValor;
             maiorCaixa = (caixa[i] > maiorValor) ? i : 0;
+            maiorValor = (caixa[i] > maiorValor) ? caixa[i] : maiorValor;
         }
 
         // qual caixa teve a menor venda
         int menorValor = caixa[0];
         int menorCaixa = 0;
         for (int i = 1; i  < caixa.length - 1; i++) {
-            menorValor = (caixa[i] < menorValor) ? caixa[i] : menorValor;
             menorCaixa = (caixa[i] < menorValor) ? i : 0;
+            menorValor = (caixa[i] < menorValor) ? caixa[i] : menorValor;
         }
 
-        System.out.println("Total do dia: " + total);
-        System.out.printf("Media por caixa: %.2f%\n", media);
-        System.out.println("Maior venda: Caixa " + maiorCaixa + "com " + maiorValor);
-        System.out.println("Menor venda: Caixa " + menorCaixa + "com " + menorValor);
+        System.out.println("Total do dia: R$" + total);
+        System.out.printf("Media por caixa: R$%.2f\n", media);
+        System.out.println("Maior venda: Caixa " + maiorCaixa + " com " + "R$" + maiorValor);
+        System.out.println("Menor venda: Caixa " + menorCaixa + " com " + "R$" + menorValor);
 
     }
 }
